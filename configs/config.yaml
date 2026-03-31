@@ -1,0 +1,38 @@
+app:
+  name: teams2issue
+  environment: development
+  startup_timeout: 10s
+  shutdown_timeout: 10s
+
+http:
+  address: 127.0.0.1:8080
+  read_timeout: 5s
+  write_timeout: 10s
+  idle_timeout: 30s
+  shutdown_timeout: 10s
+
+logging:
+  level: info
+  format: json
+  add_source: false
+
+metrics:
+  enabled: true
+  path: /metrics
+  namespace: teams2issue
+
+jira:
+  base_url: ""
+  project_key: ""
+
+teams:
+  tenant_id: ""
+  team_id: ""
+  channel_id: ""
+
+oauth2:
+  client_id: ""
+  client_secret: ""
+  auth_url: ""
+  token_url: ""
+  scopes: []
