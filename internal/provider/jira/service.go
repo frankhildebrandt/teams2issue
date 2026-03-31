@@ -3,17 +3,6 @@ package jira
 import (
 	"context"
 	"errors"
-
-	"go.uber.org/fx"
-)
-
-var Module = fx.Options(
-	fx.Provide(
-		fx.Annotate(
-			NewNoopService,
-			fx.As(new(IssueService)),
-		),
-	),
 )
 
 type CreateIssueInput struct {

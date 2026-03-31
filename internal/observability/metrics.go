@@ -6,14 +6,6 @@ import (
 	"github.com/frankhildebrandt/teams2issue/internal/config"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/collectors"
-	"go.uber.org/fx"
-)
-
-var Module = fx.Options(
-	fx.Provide(
-		NewLogger,
-		NewRegistry,
-	),
 )
 
 func NewRegistry(cfg config.Config) (*prometheus.Registry, error) {
