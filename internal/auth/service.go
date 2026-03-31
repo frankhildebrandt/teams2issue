@@ -2,16 +2,6 @@ package auth
 
 import (
 	"github.com/frankhildebrandt/teams2issue/internal/config"
-	"go.uber.org/fx"
-)
-
-var Module = fx.Options(
-	fx.Provide(
-		fx.Annotate(
-			NewNoopService,
-			fx.As(new(Service)),
-		),
-	),
 )
 
 type Service interface {

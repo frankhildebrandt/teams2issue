@@ -3,17 +3,6 @@ package teams
 import (
 	"context"
 	"errors"
-
-	"go.uber.org/fx"
-)
-
-var Module = fx.Options(
-	fx.Provide(
-		fx.Annotate(
-			NewNoopSource,
-			fx.As(new(EventSource)),
-		),
-	),
 )
 
 type Event struct {
