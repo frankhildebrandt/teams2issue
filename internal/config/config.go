@@ -59,6 +59,13 @@ type TeamsConfig struct {
 	TenantID  string `mapstructure:"tenant_id"`
 	TeamID    string `mapstructure:"team_id"`
 	ChannelID string `mapstructure:"channel_id"`
+
+	// Public HTTPS base URL where Microsoft Graph can reach this daemon.
+	// Example: https://teams2issue.example.com
+	WebhookBaseURL string `mapstructure:"webhook_base_url"`
+
+	// Shared secret to validate Graph change notifications.
+	ClientState string `mapstructure:"client_state"`
 }
 
 type OAuth2Config struct {
@@ -132,6 +139,8 @@ func setDefaults(v *viper.Viper) {
 		"teams.tenant_id":       "",
 		"teams.team_id":         "",
 		"teams.channel_id":      "",
+		"teams.webhook_base_url": "",
+		"teams.client_state":     "",
 		"oauth2.client_id":      "",
 		"oauth2.client_secret":  "",
 		"oauth2.auth_url":       "",

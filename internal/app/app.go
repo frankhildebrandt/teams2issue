@@ -8,6 +8,7 @@ import (
 
 	authpkg "github.com/frankhildebrandt/teams2issue/internal/auth"
 	"github.com/frankhildebrandt/teams2issue/internal/config"
+	"github.com/frankhildebrandt/teams2issue/internal/graph"
 	daemonhttp "github.com/frankhildebrandt/teams2issue/internal/http"
 	"github.com/frankhildebrandt/teams2issue/internal/observability"
 	jirapkg "github.com/frankhildebrandt/teams2issue/internal/provider/jira"
@@ -21,6 +22,7 @@ func New(cfg config.Config) *fx.App {
 		observability.Module,
 		daemonhttp.Module,
 		authpkg.Module,
+		graph.Module,
 		jirapkg.Module,
 		teamspkg.Module,
 		fx.Invoke(registerLifecycleLogs),
