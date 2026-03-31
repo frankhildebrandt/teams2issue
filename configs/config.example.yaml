@@ -29,6 +29,8 @@ teams:
   tenant_id: tenant-id
   team_id: team-id
   channel_id: channel-id
+  webhook_base_url: https://teams2issue.example.com
+  client_state: change-me
 
 oauth2:
   client_id: example-client-id

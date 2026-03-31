@@ -29,6 +29,8 @@ teams:
   tenant_id: ""
   team_id: ""
   channel_id: ""
+  webhook_base_url: ""
+  client_state: ""
 
 oauth2:
   client_id: ""
